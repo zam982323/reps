@@ -1,0 +1,322 @@
+:root {
+    --color-light-xl: #fff;
+    --color-light-l: #f6f6f6;
+    --color-light-s: #fafafa;
+    --color-dark-s: #cdcdcd;
+    --color-dark-m: #b2b2b2;
+    --color-dark-l: #545454;
+    --color-dark-xl: #4c4c4c;
+    --color-dark-2xl: #444;
+    --color-dark-3xl: #292929;
+    --color-primary: #f1cdb3;
+    --color-primary-light: #fddcc4;
+    --start-screen-gradient-background: #211f20;
+    --footer-gradient-background: #211f20;
+
+    --font-family: "Georgia", sans-serif;
+    --second-family: "Arial", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    font-family: var(--font-family);
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    height: 100vh;
+    background: url(../img/bg/noise_transparent.png), url(../img/bg/start-screen-gradient-background.png);
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 80px;
+}
+
+
+.logo {
+    display: block;
+}
+
+.logo__title {
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 0.06em;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.logo__subtitle {
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--color-light-xl);
+}
+
+.nav {}
+
+.nav__list {
+    display: flex;
+    column-gap: 35px;
+}
+
+.nav__item {
+    border-bottom: 3px solid transparent;
+    padding-bottom: 6px;
+    transition: all 0.3s;
+}
+
+.nav__item:hover {
+    border-color: var(--color-primary);
+}
+
+.nav__link {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--color-light-s);
+    white-space: nowrap;
+}
+
+
+
+.burger {
+    background-color: #211f20;
+    width: 30px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.burger.active {
+    transform: rotate(-90deg);
+}
+
+.burger__element,
+.burger__element::before,
+.burger__element::after {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #f1cdb3;
+}
+
+.burger__element::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.burger__element::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+.hero__content {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+
+.hero__desc {
+    /* Делаем блок flex контейнером */
+    display: flex;
+    /* Меняем направление главной оси (теперь главная ось - вертикальная) */
+    flex-direction: column;
+    /* Выравниваем по центру по главной оси (в нашем случаи по вертикали)  */
+    justify-content: center;
+    /* Выравниваем поцентру поперечной оси (в нашем случаи по горизонтали) */
+    align-items: flex-start;
+    /* Устанавливаем максимальную ширину как ув макете */
+    max-width: 460px;
+}
+
+.hero__desc .title {
+    margin-bottom: 42px;
+}
+
+.title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 44px;
+    color: var(--color-light-xl);
+    max-width: 310px;
+}
+
+.paragraph {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+}
+
+.hero__paragraph {
+    margin-bottom: 42px;
+    color: var(--color-dark-s);
+}
+
+.btn {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-3xl);
+    border-radius: 100px;
+    padding: 15px 45px;
+    display: inline-block;
+    background: var(--color-primary);
+
+}
+
+.hero__btn {}
+
+.hero__img-wrap {
+    /* Делаем flex - контейнером */
+    display: flex;
+    /* Помещаем в конец поперечной оси (в нашем случае внизу блока) */
+    align-items: flex-end;
+    /* Помещаем в конец главной оси (в нашем случае справа) */
+    justify-content: flex-end;
+    width: 698px;
+    height: 728px;
+}
+
+.about {
+    padding: 80px 0px 100px;
+    background: var(--color-light-xl);
+}
+
+.about__content {
+    display: flex;
+}
+
+.about__img-wrap {
+    width: 698px;
+    text-align: center;
+}
+
+.about__img {}
+
+.about__desc {
+    width: 50%;
+    max-width: 430px;
+}
+
+.section-title {
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+}
+
+.about__title {
+    margin-bottom: 25px;
+}
+
+.about__text {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--color-dark-xl);
+}
+
+.friends {
+    background: var(--color-light-l);
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.friends__title {
+    margin-bottom: 60px;
+}
+
+.friends__slider {
+    position: relative;
+}
+
+.slider__list {
+    display: flex;
+    padding-right: 104px;
+    padding-left: 104px;
+    gap: 30px 40px;
+    justify-content: space-between;
+}
+
+.slider__controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.slider__control {
+    display: block;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.slider__control_left {
+    left: 0;
+}
+
+.slider__control_right {
+    right: 0;
+}
